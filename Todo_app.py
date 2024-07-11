@@ -1,6 +1,5 @@
 import streamlit as st
 
-# Initialize the todos list
 def read_todos():
     try:
         with open("todos.txt", 'r') as file:

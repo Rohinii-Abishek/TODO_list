@@ -16,7 +16,7 @@ todos = read_todos()
 st.title("TODOs App")
 
 
-user_input = st.selectbox("Choose an action", ["add", "show", "edit", "exit"])
+user_input = st.selectbox("Choose an action", ["add", "show", "edit", "complete","exit"])
 
 
 if user_input == 'add':

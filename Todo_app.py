@@ -16,7 +16,7 @@ todos = read_todos()
 st.title("TODOs App")
 
 
-user_input = st.selectbox("Choose an action", ["add", "show", "edit", "complete","exit"])
+user_input = st.selectbox("Choose an action", ["add", "show", "edit", "completed","exit"])
 
 
 if user_input == 'add':
@@ -36,10 +36,10 @@ elif user_input == 'show':
             row = f"{index + 1} - {item.strip()}"
             st.write(row)
 
-elif user_input == 'complete':
+elif user_input == 'completed':
     if todos:
         number = st.number_input("Number of the todo to complete:", min_value=1, max_value=len(todos), step=1)
-        if st.button("Complete Todo"):
+        if st.button("Completed Todo"):
             index = number - 1
             todos.pop(index)
             write_todos(todos)
